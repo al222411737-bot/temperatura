@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de temperatura</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="temperatura.js" defer></script>
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Convertidor de temperatura</h1>
+
+        <form id="formTemperatura">
+            <label for="valor">Valor numérico:</label>
+            <input type="number" id="valor"
+                   step="any" placeholder="Ej. 25" required>
+
+            <label for="origen">Unidad de origen:</label>
+            <select id="origen" required>
+                <option value="">Selecciona origen</option>
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="K">Kelvin (K)</option>
+            </select>
+
+            <label for="destino">Unidad de destino:</label>
+            <select id="destino" required>
+                <option value="">Selecciona destino</option>
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="K">Kelvin (K)</option>
+            </select>
+
+            <button id="convertir" type="submit" disabled>
+                Convertir
+            </button>
+        </form>
+
+        <p id="resultado"></p>
+    </main>
+</body>
+</html>
